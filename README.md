@@ -42,6 +42,3 @@ Alternatively, while in Cedille mode in Emacs, enter Cedille
 navigation mode by pressing `M-s` and then press `h`. This will bring
 up the info file within Emacs.
 
-## License
-TODO
-
