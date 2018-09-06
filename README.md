@@ -33,12 +33,23 @@ this number), the second number conveys the minor version
 the third number conveys the patch level (mainly for bug fixes).
 
 ## Installation
-See INSTALL.txt
+To build Cedille yourself, please consult
+the [building guide](./BUILD.md)
+
+To install a pre-built binary, see the
+[github release page](https://github.com/cedille/cedille/releases).
 
 ## Documentation
-See the info file at
+The documentation for using the programming language
+can be found on the Cedille
+[homepage](https://cedille.github.io/docs/master/).
+It is also available as a `.info` file at
 [docs/info/cedille-info-main.info](https://github.com/cedille/cedille/blob/master/docs/info/cedille-info-main.info).
-Alternatively, while in Cedille mode in Emacs, enter Cedille
+Finally, while in Cedille mode in Emacs, enter Cedille
 navigation mode by pressing `M-s` and then press `h`. This will bring
 up the info file within Emacs.
 
+Consult
+[this document](https://github.com/cedille/cedille/blob/master/docs/semantics/paper.pdf)
+to learn more about
+the underlying theory that powers Cedille.
