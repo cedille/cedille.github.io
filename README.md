@@ -56,6 +56,6 @@ Cedille, please visit
 [this page](https://cedille.github.io/cedille/docs).
 
 Consult
-[this document](https://github.com/cedille/cedille.github.io/blob/master/paper.pdf)
+[this document](https://github.com/cedille/cedille.github.io/blob/master/semantics.pdf)
 to learn more about
 the underlying theory that powers Cedille.
