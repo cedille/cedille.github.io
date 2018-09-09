@@ -43,7 +43,7 @@ To install a pre-built binary, see the
 The view the documentation for using
 the programming language please visit
 [this page](https://cedille.github.io/docs/).
-This information also available as a `.info` file at
+This information is also available as a `.info` file at
 [docs/info/cedille-info-main.info](https://github.com/cedille/cedille.github.io/blob/master/info/cedille-info-main.info).
 You can also always access the documentation for
 your installed version of Cedille directly from within Emacs:
@@ -56,6 +56,6 @@ Cedille, please visit
 [this page](https://cedille.github.io/cedille/docs).
 
 Consult
-[this document](https://github.com/cedille/cedille.github.io/blob/master/semantics/paper.pdf)
+[this document](https://github.com/cedille/cedille.github.io/blob/master/paper.pdf)
 to learn more about
 the underlying theory that powers Cedille.
