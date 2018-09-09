@@ -45,9 +45,11 @@ the programming language please visit
 [this page](https://cedille.github.io/docs/).
 This information also available as a `.info` file at
 [docs/info/cedille-info-main.info](https://github.com/cedille/cedille.github.io/blob/master/info/cedille-info-main.info).
-Finally, while in Cedille mode in Emacs, enter Cedille
-navigation mode by pressing `M-s` and then press `h`. This will bring
-up the info file within Emacs.
+You can also always access the documentation for
+your installed version of Cedille directly from within Emacs:
+while in Cedille mode, enter Cedille
+navigation mode by pressing `M-s` and then press `h`.
+This will bring up the info file within Emacs.
 
 To see the documentation of the development version of
 Cedille, please visit
