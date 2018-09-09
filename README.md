@@ -42,12 +42,16 @@ To install a pre-built binary, see the
 ## Documentation
 The documentation for using the programming language
 can be found on the Cedille
-[homepage](https://cedille.github.io/docs/master/).
+[homepage](https://cedille.github.io/docs/).
 It is also available as a `.info` file at
 [docs/info/cedille-info-main.info](https://github.com/cedille/cedille/blob/master/docs/info/cedille-info-main.info).
 Finally, while in Cedille mode in Emacs, enter Cedille
 navigation mode by pressing `M-s` and then press `h`. This will bring
 up the info file within Emacs.
+
+To see the documentation of the development version of
+Cedille, please visit
+[this page](https://cedille.github.io/cedille/docs).
 
 Consult
 [this document](https://github.com/cedille/cedille/blob/master/docs/semantics/paper.pdf)
