@@ -33,11 +33,27 @@ this number), the second number conveys the minor version
 the third number conveys the patch level (mainly for bug fixes).
 
 ## Installation
-To build Cedille yourself, please consult
-the [building guide](./BUILD.md)
-
 To install a pre-built binary, see the
 [github release page](https://github.com/cedille/cedille/releases).
+
+Alternatively, to build Cedille yourself, please consult
+the [building guide](./BUILD.md)
+
+After installing Cedille,
+make sure to add
+`(require 'cedille-mode)`
+to your `.emacs` file.
+When you open a Cedille source file
+(e.g. `lib/bool.ced`), Emacs
+will load "Cedille" mode.
+Now you can type `M-s`
+to enter "Cedille
+Structured Editing Mode"
+(or, "SE-mode").
+See the
+["Tooling"](https://cedille.github.io/docs/tooling.html#tooling)
+section of the documentation
+for more information.
 
 ## Documentation
 The view the documentation for using
