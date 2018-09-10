@@ -53,7 +53,7 @@ This will bring up the info file within Emacs.
 
 To see the documentation of the development version of
 Cedille, please visit
-[this page](https://cedille.github.io/cedille/docs).
+[this page](https://cedille.github.io/cedille/html/).
 
 Consult
 [this document](https://github.com/cedille/cedille.github.io/blob/master/semantics.pdf)
