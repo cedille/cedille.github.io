@@ -1,22 +1,33 @@
-# Çedille
-The Cedille programming language empowers you with the ability to
-interactively prove mathematical theorems as well as verify
-programs. Using the Cedille Emacs mode you interact directly with the
-compiler to check your syntax, elegantly navigate through parts your
-code, obtain rich contextual information about those portions of code,
-and of course receive useful feedback about the
-correctness/non-correctness of that code. The Cedille compiler paired
-with the Emacs mode comprises a fully featured interactive theorem
-prover, but you can also compile your Cedille code into
-[Racket](https://racket-lang.org/) in order to execute your code.
+# Cedille
+Cedille is an interactive theorem-prover and dependently typed
+programming language, based on extrinsic (aka Curry-style) type theory.
+This makes it rather different from type theories like Coq and Agda,
+which are intrinsic (aka Church-style).  In Cedille, terms are nothing
+more than annotated versions of terms of pure untyped lambda calculus.  
+In contrast, in Coq or Agda, the various typing annotations one writes
+are intrinsic parts of terms, and can be erased, if at all, only as an
+optimization under certain conditions, not in virtue of the definition
+of the type theory.
 
-Beyond its next-generation Emacs interface, the Cedille programming
-language embodies an innovative impredicative dependent type theory
-that permits a much smaller trusted computing base than some other
-interactive theorem provers. In particular, the theory behind Cedille
-enables one to derive an induction principle of a lambda encoded
-datatype, so that it is not necessary to extend the core theory to
-support inductive datatypes.
+Cedille's type theory allows one to derive inductive datatypes,
+together with their induction principles.  These derivations are done
+via lambda-encodings, including not just the familiar Church encoding
+(with its well-known limitation to inefficient accessors), but also
+more efficient Parigot and Mendler encodings.  The planned 1.1 version
+of Cedille will support datatype declarations and pattern-matching
+recursion, via elaboration to certain of these encodings.  (This feature
+did not quite make it into the 1.0 release.)
+
+Cedille is used from an emacs mode, which communicates with the
+backend tool.  The emacs mode supports convenient navigation of
+the source text following the structure of its syntax tree.  Typing
+and context information is available for all subexpressions as
+one navigates, as well as information related to type inference.  Cedille
+implements a novel form of local type inference called spine-local type
+inference.  At the moment this is restricted to solving for first-order
+type variables, but in the coming 2018-2019 academic year we plan
+to add support for inferring values for term variables as well as
+dependent and higher-order type variables.
 
 ## Releases
 The Cedille compiler is currently maintained at
