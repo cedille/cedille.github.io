@@ -82,6 +82,10 @@ while in Cedille mode, enter Cedille
 navigation mode by pressing `M-s` and then press `h`.
 This will bring up the info file within Emacs.
 
+To see some helpful examples of Cedille programs,
+please take a look at the
+[language overview page](https://cedille.github.io/language-overview/)
+
 To see the documentation of the development version of
 Cedille, please visit
 [this page](https://cedille.github.io/cedille/html/).
