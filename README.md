@@ -3,8 +3,8 @@ Cedille is an interactive theorem-prover and dependently typed
 programming language, based on extrinsic (aka Curry-style) type theory.
 This makes it rather different from type theories like Coq and Agda,
 which are intrinsic (aka Church-style).  In Cedille, terms are nothing
-more than annotated versions of terms of pure untyped lambda calculus.  
-In contrast, in Coq or Agda, the various typing annotations one writes
+more than annotated versions of terms of pure untyped lambda calculus. In
+contrast, in Coq or Agda, the various typing annotations one writes
 are intrinsic parts of terms, and can be erased, if at all, only as an
 optimization under certain conditions, not in virtue of the definition
 of the type theory.
@@ -48,7 +48,13 @@ To install a pre-built binary, see the
 [github release page](https://github.com/cedille/cedille/releases).
 
 Alternatively, to build Cedille yourself, please consult
-the [building guide](./BUILD.md)
+the [building guide](./BUILD.md).
+
+To use Cedille, we believe you will need emacs
+version 24.5.1 or higher (we have tested on emacs 25.3.2).  (It is possible
+it will run on earlier versions of emacs, but we have not tested this.)
+It will also run in spacemacs, version 0.200.13 @ 25.3.50 (disable 
+evil-escape-key-sequence, or rebind).
 
 After installing Cedille,
 make sure to add
@@ -58,17 +64,15 @@ When you open a Cedille source file
 (e.g. `lib/bool.ced`), Emacs
 will load "Cedille" mode.
 Now you can type `M-s`
-to enter "Cedille
-Structured Editing Mode"
-(or, "SE-mode").
+to enter Cedille navigation mode.
 See the
-["Tooling"](https://cedille.github.io/docs/tooling.html#tooling)
+["Commands"](https://cedille.github.io/docs/cedille-mode-commands.html)
 section of the documentation
 for more information.
 
 ## Documentation
 The view the documentation for using
-the programming language please visit
+Cedille please visit
 [this page](https://cedille.github.io/docs/).
 This information is also available as a `.info` file at
 [docs/info/cedille-info-main.info](https://github.com/cedille/cedille.github.io/blob/master/info/cedille-info-main.info).
