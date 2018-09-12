@@ -3,11 +3,10 @@
 Please see the example programs below for a
 quick tour of some of Cedille's important features.
 
- * [equational-reasoning.ced](./equational-reasoning.ced/)
- * [implicit-products.ced.md](./language-overview/implicit-products.ced.md)
- * [induction-for-church-nats.ced.md](./language-overview/induction-for-church-nats.ced.md)
- * [language-overview.md](./language-overview/language-overview.md)
- * [opaque-definitions.ced.md](./language-overview/opaque-definitions.ced.md)
- * [structural-operations.ced.md](./language-overview/structural-operations.ced.md)
- * [type-inference.ced.md](./language-overview/type-inference.ced.md)
- * [type-quantification.ced.md](./language-overview/type-quantification.ced.md)
+ * [equational-reasoning.ced](./equational-reasoning.ced)
+ * [implicit-products.ced](./implicit-products.ced)
+ * [induction-for-church-nats.ced](./induction-for-church-nats.ced)
+ * [opaque-definitions.ced](./opaque-definitions.ced)
+ * [structural-operations.ced](./structural-operations.ced)
+ * [type-inference.ced](./type-inference.ced)
+ * [type-quantification.ced](./type-quantification.ced)
