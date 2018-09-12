@@ -90,3 +90,7 @@ Consult
 [this document](https://github.com/cedille/cedille.github.io/blob/master/semantics.pdf)
 to learn more about
 the underlying theory that powers Cedille.
+
+## Community
+To join the Cedille user mailing list, please visit our
+[google groups page](https://groups.google.com/forum/#!forum/cedille-lang).
