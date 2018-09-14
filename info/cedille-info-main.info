@@ -18,6 +18,7 @@ implementation.
 * unicode shortcuts::            Keyboard shortcuts for unicode symbols
 * extra buffers::                Cedille has several other buffers for viewing information computed for the source file
 * options::                      A description of the options file, holding some global settings for Cedille
+* roadmap::                      What is the plan for upcoming Cedille development
 * credits::                      Who has contributed to the Cedille tool
 * Index::                        Index to the documentation
 
@@ -270,8 +271,46 @@ navigation) part of the elisp code is concerned with processing the
 spans and assembly an abstract syntax tree based on span containment.
 ‘se-mode’ is generic, and can be used as the basis for structured
 navigation for other languages.  ‘se-mode’ was proposed, designed, and
-implemented by U. Iowa undergraduate Carl Olson, before the current
-Cedille implementation began.
+implemented by (then) U. Iowa undergraduate Carl Olson, before the
+current Cedille implementation began.
+
+2.2 Spine-local type inference
+==============================
+
+Cedille implements a novel form of local type inference due to Chris
+Jenkins, called spine-local type inference.  Cedille will try to fill in
+omitted values for type variables via first-order matching (not
+unification).  There is currently some heuristic support for
+second-order matching, but a complete second-order matcher (note that
+second-order matching is decidable, unlike second-order unification) is
+planned for after the 1.0 release.  The inference is local in the sense
+that type meta-variables are never propagated out of a locale, which is
+an application spine (i.e., head applied to arguments).  Spine-local
+type inference also uses the expected type for a locale to fill in
+missing values for type variables used in the type of the locale.  For
+more information, see the paper on ArXiv.
+(https://arxiv.org/abs/1805.10383) See also some examples in
+‘language-overview/type-inference.ced’.  When in Cedille navigation
+mode, use keystroke <m> to view the meta-variables buffer, where
+information on meta-variables and their current solutions (if any) is
+shown; when this buffer is shown, the locale will also be highlighted in
+the Cedille source buffer.
+
+2.3 File structure and modules
+==============================
+
+A Cedille source file consists first of a header consisting of optional
+module imports (‘import X.’), then a module declaration for the file
+(‘module X(params)’), and then more optional imports.  The parameters
+can be term- or type-level, and one can indicate erased term-level
+parameters with curly braces.  For an example of a module parametrized
+by a type of natural numbers mod 2:
+
+‘module X(A : ★)(z : A)(s : A ➔ A){p : { z ≃ s (s z) }} .’
+
+After the header, the file consists of term, type, or kind definitions.
+
+Modules may be partially applied.
 
 
 File: cedille-info-main.info,  Node: cedille mode commands,  Next: unicode shortcuts,  Prev: tooling,  Up: Top
@@ -279,7 +318,9 @@ File: cedille-info-main.info,  Node: cedille mode commands,  Next: unicode short
 3 cedille-mode commands
 ***********************
 
-Cedille mode supports the following commands:
+To enter Cedille navigation mode (invoking the backend), the command is
+<Alt-s>.  In Cedille navigation mode, the following commands are
+available:
 
 4 Navigation
 ************
@@ -787,10 +828,76 @@ The context buffer has several built-in features to organize data:
      Jumps to the definition of the selected variable
 
 
-File: cedille-info-main.info,  Node: credits,  Next: about,  Prev: options,  Up: Top
+File: cedille-info-main.info,  Node: options,  Next: roadmap,  Prev: extra buffers,  Up: Top
 
-23 Credits
+23 cedille-mode options
+***********************
+
+The options file resides in ~/.cedille/options and consists of a list of
+options, each on its own line, with a terminating period (“.”).  The
+available options are:
+
+‘import-directories "/path/to/dir"’
+     This specifies a directory where Cedille will search for imported
+     files.  Any number of directories may be listed, each on its own
+     line.  They will be searched after the current directory.
+     Currently, it is not recommended to have two files with the same
+     name.
+
+‘use-cede-files = [true/false]’
+     Enables/disables the Cedille backend’s use of .cede files
+
+‘make-rkt-files = [true/false]’
+     Enables/disables the Cedille backend’s generation of .rkt files
+
+‘generate-logs = [true/false]’
+     Enables/disables generation of log files (.cedille/log)
+
+‘show-qualified-vars = [true/false]’
+     Enables/disables the printing of fully-qualified variables
+
+‘erase-types = [true/false]’
+     Sets whether or not types are erased before they are displayed, for
+     convenience.
+
+
+File: cedille-info-main.info,  Node: roadmap,  Next: credits,  Prev: options,  Up: Top
+
+24 Roadmap
 **********
+
+Cedille is under active development, and the following major changes are
+planned.  Cedille 1.1 will probably be Fall 2018 (we are not too far
+from done with the datatype notations).  Cedille 1.2 is likely Winter
+2018 or Spring 2019.  Cedille 2.0 is hopefully Summer 2019, but we are
+still immersed in the basic research for that.
+
+   • Datatype declarations and pattern-matching recursion, compiled to a
+     Mendler lambda-encoding, Cedille 1.1
+   • Second-order matching and term inference incorporated into
+     spine-local type inference, Cedille 1.2
+   • Rebase Cedille on sequent calculus to enable deriving types like
+     existentials as dual to universals, and support constructive
+     control operators, Cedille 2.0
+
+For datatype notations, we have, in a number of papers and works in
+progress, devised semantics in Cedille for various somewhat advanced
+features: histomorphic recursion, inductive-recursive types, and
+inductive-inductive types.  We will be gradually incorporating
+high-level syntax for these into Cedille, starting with histomorphic
+recursion.
+
+
+File: cedille-info-main.info,  Node: credits,  Next: about,  Prev: roadmap,  Up: Top
+
+25 Credits
+**********
+
+Fall 2018:
+==========
+
+Development team: Tony Cantor, Larry Diehl, Chris Jenkins, Andrew
+Marmaduke, Colin McDonald, Aaron Stump
 
 Fall 2017 to Summer 2018:
 =========================
@@ -860,39 +967,6 @@ Carl A. Olson
      se-mode for structured navigation
 
 
-File: cedille-info-main.info,  Node: options,  Next: credits,  Prev: extra buffers,  Up: Top
-
-24 cedille-mode options
-***********************
-
-The options file resides in ~/.cedille/options and consists of a list of
-options, each on its own line, with a terminating period (“.”).  The
-available options are:
-
-‘import-directories "/path/to/dir"’
-     This specifies a directory where Cedille will search for imported
-     files.  Any number of directories may be listed, each on its own
-     line.  They will be searched after the current directory.
-     Currently, it is not recommended to have two files with the same
-     name.
-
-‘use-cede-files = [true/false]’
-     Enables/disables the Cedille backend’s use of .cede files
-
-‘make-rkt-files = [true/false]’
-     Enables/disables the Cedille backend’s generation of .rkt files
-
-‘generate-logs = [true/false]’
-     Enables/disables generation of log files (.cedille/log)
-
-‘show-qualified-vars = [true/false]’
-     Enables/disables the printing of fully-qualified variables
-
-‘erase-types = [true/false]’
-     Sets whether or not types are erased before they are displayed, for
-     convenience.
-
-
 File: cedille-info-main.info,  Node: Index,  Next: about,  Prev: credits,  Up: Top
 
 Index
@@ -910,19 +984,20 @@ Index
 
 Tag Table:
 Node: Top95
-Node: about962
-Node: tooling10822
-Node: cedille mode commands13853
-Node: unicode shortcuts17037
-Node: extra buffers19153
-Node: inspect buffer20497
-Node: summary buffer21692
-Node: meta-vars buffer22505
-Node: beta-reduce mode23536
-Node: context buffer24721
-Node: credits26748
-Node: options27913
-Node: Index29092
+Node: about1045
+Node: tooling10905
+Node: cedille mode commands15812
+Node: unicode shortcuts19098
+Node: extra buffers21214
+Node: inspect buffer22558
+Node: summary buffer23753
+Node: meta-vars buffer24566
+Node: beta-reduce mode25597
+Node: context buffer26782
+Node: options28809
+Node: roadmap29988
+Node: credits31181
+Node: Index32475
 
 End Tag Table
 
