@@ -95,6 +95,15 @@ Consult
 to learn more about
 the underlying theory that powers Cedille.
 
+
+## Developments
+
+See the [Cedille developments](https://github.com/cedille/cedille-developments) repository
+for larger examples of using Cedille, which includes the accompanying
+code for papers on [generic induction (CPP'18)](http://firsov.ee/impred-ind/impred-ind.pdf), 
+[efficient Mendler-style encodings (ITP'18)](https://arxiv.org/abs/1803.02473), 
+and [generic reuse (ICFP'18)](https://arxiv.org/abs/1803.08150).
+
 ## Community
 To join the Cedille user mailing list, please visit our
 [google groups page](https://groups.google.com/forum/#!forum/cedille-lang).
