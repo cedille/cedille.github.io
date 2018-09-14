@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir ./language-overview/
 for i in ../cedille/language-overview/*; do
   fname="$(basename $i)"
   mkdir "language-overview/${fname}/"
