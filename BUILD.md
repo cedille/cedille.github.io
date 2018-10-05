@@ -1,15 +1,15 @@
 # Building Cedille version 1.0
 
-0. Install Agda version 2.5.x, which is needed to compile Cedille.
-   Please note that Cedille currently does not work on Windows, only
-   Linux and Mac (though Windows support should be available soon).
+0. Install Agda version 2.5.4 or above, which is needed to compile Cedille.
+   Please note that Cedille currently does not work on Windows, only Linux and
+   Mac (though Windows support should be available soon).
 
 1. Clone a copy of the Iowa Agda Library (probably best to do this
-   in some other directory), and check out version 1.4:
+   in some other directory), and check out version 1.5:
 
    * `git clone https://github.com/cedille/ial.git`
    * `cd ial`
-   * `git checkout v1.4.0`
+   * `git checkout v1.5.0`
 
    For SVN users, the (soon to be deprecated) repo can be accessed by:
 
