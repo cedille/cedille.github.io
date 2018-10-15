@@ -30,7 +30,7 @@
 
 # Editing Agda Source Files for Cedille
 
- * Since Agda 2.5.x now uses a library system, you need to tell Agda
+ * Since Agda 2.5.4 now uses a library system, you need to tell Agda
    about the three libraries used for Cedille (these are for the Cedille
    sources, the IAL, and some stuff for the parser).  If you run `make`
    (or directly `./create-libraries.sh`) it will create the libraries
