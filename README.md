@@ -86,6 +86,10 @@ To see some helpful examples of Cedille programs,
 please take a look at the
 [language overview page](https://cedille.github.io/language-overview/)
 
+To watch tutorial videos on programming in Cedille, see the Cedille channel on
+[YouTube](https://www.youtube.com/channel/UCfV0BJz4nltlj-4yWNZ34lw), with
+accompanying code on [GitHub](https://github.com/cedille/cedille-cast)
+
 To see the documentation of the development version of
 Cedille, please visit
 [this page](https://cedille.github.io/cedille/html/).
