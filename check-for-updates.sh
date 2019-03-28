@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cedille_dir="../cedille"
-last_release="release-1.0"
+last_release="release-1.1"
 
 echo "checking $cedille_dir for differences"
 

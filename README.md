@@ -13,10 +13,9 @@ Cedille's type theory allows one to derive inductive datatypes,
 together with their induction principles.  These derivations are done
 via lambda-encodings, including not just the familiar Church encoding
 (with its well-known limitation to inefficient accessors), but also
-more efficient Parigot and Mendler encodings.  The planned 1.1 version
-of Cedille will support datatype declarations and pattern-matching
-recursion, via elaboration to certain of these encodings.  (This feature
-did not quite make it into the 1.0 release.)
+more efficient Parigot and Mendler encodings. Further, Cedille
+supports datatype declarations and pattern-matching recursion via
+elaboration to certain of these encodings.
 
 Cedille is used from an emacs mode, which communicates with the
 backend tool.  The emacs mode supports convenient navigation of
