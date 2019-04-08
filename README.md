@@ -34,12 +34,12 @@ The Cedille compiler is currently maintained at
 and you can download current and past releases on the
 [github release page](https://github.com/cedille/cedille/releases).
 
-The Cedille version numbers are of the form X.Y.Z, where the first
-number conveys the "major" version (generally, an introduction of an
-major new feature triggers a change in this number), the second
-number conveys the "minor" version (introduction of significant but
-backwards compatible changes), and the third number conveys the
-"patch" version (mainly for bug fixes).
+The Cedille version numbers are of the form X.Y.Z. The first number
+conveys the "major" version, which changes upon an introduction of a
+major new feature. The second number conveys the "minor" version,
+which changes by introduction of significant new features that are
+relatively backwards compatible. Finally, the third number conveys the
+"patch" version, which just changes for bug fixes.
 
 ## Installation
 To install a pre-built binary, see the
