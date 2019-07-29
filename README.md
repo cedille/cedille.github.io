@@ -4,10 +4,10 @@ programming language, based on extrinsic (aka Curry-style) type theory.
 This makes it rather different from type theories like Coq and Agda,
 which are intrinsic (aka Church-style).  In Cedille, terms are nothing
 more than annotated versions of terms of pure untyped lambda calculus. In
-contrast, in Coq or Agda, the various typing annotations one writes
-are intrinsic parts of terms, and can be erased, if at all, only as an
-optimization under certain conditions, not in virtue of the definition
-of the type theory.
+contrast, in Coq or Agda, the typing annotations are intrinsic parts of
+terms. The typing annotations can only be erased as an optimization
+under certain conditions, not by virtue of the definition of the type
+theory.
 
 Cedille's type theory allows one to derive inductive datatypes,
 together with their induction principles.  These derivations are done
