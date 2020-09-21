@@ -5,7 +5,7 @@
     - On MacOS these may already be available if you have xcode libraries installed
 2. In the Cedille repository directory:
     - Run `stack build Agda alex happy`
-    - Run `stack build --copy-bins --local-bin-path .`
+    - Run `mkdir -p ./bin; stack build --copy-bins --local-bin-path ./bin`
 3. Add the following to your `~/.emacs` file, changing the path to match your system
 ```
 (setq cedille-path "/path/to/cedille-dir/")
